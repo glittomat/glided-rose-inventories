@@ -21,22 +21,20 @@ These are the services which are the core part of the application. So any change
 informing the devleopers who work or debug this code.
 
 The following would be included if this was an actual business application:
-1. Surge Design would be maintained as a seperate microservice & this microserivce would be called in an asynchronous way so that the subsequent requests are not blocked, or delayed. 
-Similarly, service registry,  health check & so on would be implemented for all the microservices, thereby tapping the potential of micrservices.	
+1. Surge Design would be maintained as a seperate microservice & this microserivce would be called in an asynchronous way so that the subsequent requests are not blocked, or delayed. Similarly, service registry,  health check & so on would be implemented for all the microservices, thereby tapping the potential of micrservices.
 2. The DB primary ids would be hidden while sending back response for Buy operation. An internal logic would be utilized to calculate the ID as and when necessary. 
 3. High availability & backup recovery would be implemented when the product grows.
 4. More metadata of each transaction would be saved and tracked, which can be used for data anaysis & improving the product.
 5. Another optimal pricing startegy.available existing strategy in market would be used to meet the tradeoff between demand and supply, rather than using a fixed rate of 10% surge. 
---------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------
+API Endpoints:</br>
+Context-path: /api/gilded-rose</br>
+Local Swagger URL : http://{local_server_host}:{local_server_port}/api/gilded-rose/swagger-ui/index.html?url=/api/gilded-rose/api-docs</br>
 
-API Endpoints : 
-context-path: /api/gilded-rose
-Local Swagger URL : http://{local_server_host}:{local_server_port}/api/gilded-rose/swagger-ui/index.html?url=/api/gilded-rose/api-docs
-
-
-1. For Authentication & getting JWT access token
-Mehtod: POST
-URL: http://{local_server_host}:{local_server_port}/api/gilded-rose/authenticate
+1. For Authentication & getting JWT access token</br>
+Mehtod: POST</br>
+URL: http://{local_server_host}:{local_server_port}/api/gilded-rose/authenticate</br>
+		
 		Request:
 		{
 		    "username":"miw",
@@ -48,43 +46,46 @@ URL: http://{local_server_host}:{local_server_port}/api/gilded-rose/authenticate
 		    "jwt": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtaXciLCJleHAiOjE2NjAzOTMyNTEsImlhdCI6MTY2MDM1NzI1MX0._8FzuGQNlO20gvRwqEUpv7be3VD1-HxydXBrhwC-2Zo"
 		}
 
-2. For getting all Inventories: 
-Method: GET
-URL: http://{local_server_host}:{local_server_port}/api/gilded-rose/getAllInventories
-Response :
-{
-    "itemEntities": [
-        {
-            "id": 101,
-            "name": "Book",
-            "description": "The Book",
-            "price": 100.0
-        },
-        {
-            "id": 102,
-            "name": "Car",
-            "description": "Lexus",
-            "price": 1000.0
-        },
-        {
-            "id": 103,
-            "name": "Chocolate",
-            "description": "KitKat",
-            "price": 11.0
-        },
-        {
-            "id": 104,
-            "name": "Rose",
-            "description": "flower",
-            "price": 1.0
-        }
-    ]
-}
+2. For getting all Inventories: </br>
+Method: GET</br>
+URL: http://{local_server_host}:{local_server_port}/api/gilded-rose/getAllInventories</br>
+		
+		
+		Response :
+		{
+		    "itemEntities": [
+			{
+			    "id": 101,
+			    "name": "Book",
+			    "description": "The Book",
+			    "price": 100.0
+			},
+			{
+			    "id": 102,
+			    "name": "Car",
+			    "description": "Lexus",
+			    "price": 1000.0
+			},
+			{
+			    "id": 103,
+			    "name": "Chocolate",
+			    "description": "KitKat",
+			    "price": 11.0
+			},
+			{
+			    "id": 104,
+			    "name": "Rose",
+			    "description": "flower",
+			    "price": 1.0
+			}
+		    ]
+		}
 
-3. For getting the requested Inventory: 
-Method: GET
-URL: http://{local_server_host}:{local_server_port}/api/gilded-rose/getInventory/{id}
-Here id = name of the item. For the below response, its chocolate
+3. For getting the requested Inventory: </br> Here id = name of the item. For the below response, its chocolate</br>
+Method: GET</br>
+URL: http://{local_server_host}:{local_server_port}/api/gilded-rose/getInventory/{id} </br>
+
+
 	Response:
 	{
 	    "item": {
@@ -95,9 +96,12 @@ Here id = name of the item. For the below response, its chocolate
 	    }
 	}
 
-4. For Buy Operation
-Method: POST
-URL: http://{local_server_host}:{local_server_port}/api/gilded-rose/buyInventory
+
+4. For Buy Operation</br>
+Method: POST</br>
+URL: http://{local_server_host}:{local_server_port}/api/gilded-rose/buyInventory </br>
+
+
 		Request:
 		{
 			"buyItems" : {
