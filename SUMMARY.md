@@ -85,18 +85,18 @@ URL: http://{local_server_host}:{local_server_port}/api/gilded-rose/getAllInvent
 Method: GET</br>
 URL: http://{local_server_host}:{local_server_port}/api/gilded-rose/getInventory/{id} </br>
 
+		
+		Response: 
+		{
+		    "item": {
+		            "id": 103,
+		            "name": "Chocolate",
+		            "description": "KitKat",
+		            "price": 10.0
+		        }
+		}
 
-	Response:
-	{
-	    "item": {
-	        "id": 103,
-	        "name": "Chocolate",
-	        "description": "KitKat",
-	        "price": 10.0
-	    }
-	}
-
-
+ 
 4. For Buy Operation</br>
 Method: POST</br>
 URL: http://{local_server_host}:{local_server_port}/api/gilded-rose/buyInventory </br>
