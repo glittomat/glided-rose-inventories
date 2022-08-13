@@ -1,6 +1,4 @@
-This API uses a surge pricing design, which is implemented in SurgePriceUtil class. It tracks & stores the hit timestamps of each item in a queue. 
-This queue is inside the HitCounter inner class, which is the value of Hashmap, where Key=Item. 
-HitCounter inner class stores the Queue mentioned above & the intial price of each item.
+This API uses a surge pricing design, which is implemented in SurgePriceUtil class. It tracks & stores the hit timestamps of each item in a queue. This queue is inside the HitCounter inner class, which is the value of Hashmap, where Key=Item. HitCounter inner class stores the Queue mentioned above & the intial price of each item.
 
 The design incorporates the following three features:
 	1. If any item is viewed more than 10 times within an hour, the price will be surged by 10%. The surge continues by 10% for every subsequent 10 views after that.
@@ -30,8 +28,6 @@ Similarly, service registry,  health check & so on would be implemented for all 
 4. More metadata of each transaction would be saved and tracked, which can be used for data anaysis & improving the product.
 5. Another optimal pricing startegy.available existing strategy in market would be used to meet the tradeoff between demand and supply, rather than using a fixed rate of 10% surge. 
 --------------------------------------------------------------------------------------------------------------------------
-
-
 
 API Endpoints : 
 context-path: /api/gilded-rose
