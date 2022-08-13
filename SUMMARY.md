@@ -81,7 +81,7 @@ URL: http://{local_server_host}:{local_server_port}/api/gilded-rose/getAllInvent
 		    ]
 		}
 
-3. For getting the requested Inventory: </br> Here id = name of the item. For the below response, its chocolate</br>
+3. For getting the requested Inventory: (Here {id} corresponds to name of the item. When {id}=Chocolate, the resonse will be as below)</br>
 Method: GET</br>
 URL: http://{local_server_host}:{local_server_port}/api/gilded-rose/getInventory/{id} </br>
 
