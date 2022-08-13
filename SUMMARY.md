@@ -33,7 +33,10 @@ Similarly, service registry,  health check & so on would be implemented for all 
 
 
 
-API Endpoints : (Context Path: /api/gilded-rose)
+API Endpoints : 
+context-path: /api/gilded-rose
+Local Swagger URL : http://{local_server_host}:{local_server_port}/api/gilded-rose/swagger-ui/index.html?url=/api/gilded-rose/api-docs
+
 
 1. For Authentication & getting JWT access token
 Mehtod: POST
