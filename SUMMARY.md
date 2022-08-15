@@ -27,9 +27,9 @@ The following would be included if this was an actual business application:
 4. More metadata of each transaction would be saved and tracked, which can be used for data anaysis & improving the product.
 5. Another optimal pricing startegy.available existing strategy in market would be used to meet the tradeoff between demand and supply, rather than using a fixed rate of 10% surge. 
 -------------------------------------------------------------------------------------------------------------------------------------
-To run the application via Jar file:
+To run the application first time/via Jar file:
 1. Remove data.sql(Because this have queries to insert users  into the USER table in DB, which is authenticated via /authenticate & also have delete existing entries & adding some items into ITEM table  )
-2. maven install from IDE(or other way via command prompt with required comments) & exceute the jar in command prompt(java -jar gilded-rose-1.0-SNAPSHOT.jar).
+2. Thi is required if application is run via jar. Run maven install from IDE(or other way via command prompt with required comments) & exceute the jar in command prompt(java -jar gilded-rose-1.0-SNAPSHOT.jar).
 3. Run the contents in data.sql via H2 console(http://localhost:{port}/api/gilded-rose/h2/login.jsp) & execute the commands. This is primarly to get the user added in the USER table in DB  & this can be authenticated using /authenticate api. Along with this some values for ITEM table can also get added via this
 4. The conitnue further testing
 
