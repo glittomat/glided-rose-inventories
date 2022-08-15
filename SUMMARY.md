@@ -22,7 +22,7 @@ informing the devleopers who work or debug this code.
 
 The following would be included if this was an actual business application:
 1. Surge Design would be maintained as a seperate microservice & this microserivce would be called in an asynchronous way so that the subsequent requests are not blocked, or delayed. Similarly, service registry,  health check & so on would be implemented for all the microservices, thereby tapping the potential of micrservices.
-2. The DB primary ids would have kept hidden while sending request for GET &  response back for Buy operation. An internal logic would be utilized to calculate the ID as and when necessary for buy operation & hide IDs for GET operations(like JsonIgnore). 
+2. The DB primary ids would have kept hidden while sending request for GET &  response back for Buy operation. An internal logic would be utilized to calculate the ID as and when necessary for buy operation & hide IDs for GET operations(like JsonIgnore). Or else would have opted a combination of primary key & foreign key to perisit the data. For now, i have kept ID exposed, to make it simple & to avoid ambuguity as product can have same name, description or price. 
 3. High availability & backup recovery would be implemented when the product grows.
 4. More metadata of each transaction would be saved and tracked, which can be used for data anaysis & improving the product.
 5. Another optimal pricing startegy.available existing strategy in market would be used to meet the tradeoff between demand and supply, rather than using a fixed rate of 10% surge. 
