@@ -33,10 +33,10 @@ To run the application first time/via Jar file:
 3. Run the contents in data.sql via H2 console(http://localhost:{port}/api/gilded-rose/h2/login.jsp) & execute the commands. This is primarly to get the user added in the USER table in DB  & this can be authenticated using /authenticate api. Along with this some values for ITEM table can also get added via this
 4. The conitnue further testing
 
-API Endpoints:</br>
-Context-path: /api/gilded-rose</br>
-Local Swagger URL : http://{local_server_host}:{local_server_port}/api/gilded-rose/swagger-ui/index.html?url=/api/gilded-rose/api-docs</br>
-
+- API Endpoints:</br>
+- Context-path: /api/gilded-rose</br>
+- Local Swagger URL : http://{local_server_host}:{local_server_port}/api/gilded-rose/swagger-ui/index.html?url=/api/gilded-rose/api-docs</br>
+- Get JWT token from /authentication on validating credentials against DB users & use this JWT token for further access. (For postman, either via passing Header-> Authorization: Bearer <JWT Token> or Using Authorization:-> choose Type: Bearer Token. Token:<JWT Token>. In swagger -> click Authorize & put client key as JWT Token )<br>
 1. For Authentication & getting JWT access token</br>
 Mehtod: POST</br>
 URL: http://{local_server_host}:{local_server_port}/api/gilded-rose/authenticate</br>
